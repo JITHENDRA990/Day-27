@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #111;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+.heart2{
+    height: 70px;
+    width: 70px;
+    background-color: black;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 20px 90px red;
+    animation: he 2s linear infinite;
+    left: 30%;
+    top: 2%;
+    z-index: 9;
+
+}
+    
+.heart2::before{
+    height: 70px;
+    width: 70px;
+    background-color: black;
+    top: -55%;
+    position: absolute;
+    content: '';
+    border-radius: 80px;
+}
+.heart2::after{
+    height: 70px;
+    width: 70px;
+    background-color: black;
+    right: -55%;
+    position: absolute;
+    content: '';
+    border-radius: 150px;
+}
+@keyframes he{
+    0%{
+        transform: rotate(-45deg) scale(1.09);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(1.02);
+    }
+}
+.circle1{
+    height: 400px;
+    width: 400px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid red;
+    animation: cir 2s linear infinite;
+
+
+}
+@keyframes cir{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360);
+        background-color: skyblue;
+        transition: 5s;
+    }
+}
+
+
+.rectangle{
+    height: 600px;
+    width: 600px;
+    background-color:skyblue;
+    position: absolute;
+    transform: rotate(-45deg);
+    animation: he 2s linear infinite;
+}
